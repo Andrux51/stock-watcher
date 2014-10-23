@@ -36,7 +36,7 @@ module.exports = function(grunt) {
       },
       dist: {
         files: {
-          '<%= meta.distPath %>/scripts/<%= meta.sysName %>.min.js': ['<%= meta.srcPath %>/assets/scripts/<%= meta.sysName %>Cfg.js','<%= meta.srcPath %>/features/**/*.js']
+          '<%= meta.distPath %>/scripts/<%= meta.sysName %>.min.js': ['<%= meta.srcPath %>/assets/scripts/<%= meta.sysName %>Cfg.js','<%= meta.srcPath %>/modules/**/*.js']
         }
       }
     }
@@ -47,7 +47,7 @@ module.exports = function(grunt) {
           // {expand: true, cwd: '<%= meta.srcPath %>', src: '**', dest: '<%= meta.distPath %>/'}
           { expand: true, cwd: '<%= meta.srcPath %>/bower_components', src: '**', dest: '<%= meta.distPath %>/bower_components' }
           , { expand: true, cwd: '<%= meta.srcPath %>/assets/images', src: '**', dest: '<%= meta.distPath %>/images' }
-          , { expand: true, cwd: '<%= meta.srcPath %>', src: 'features/**/views/**', dest: '<%= meta.distPath %>' }
+          , { expand: true, cwd: '<%= meta.srcPath %>', src: 'modules/**/views/**', dest: '<%= meta.distPath %>' }
         ]
       }
     }
@@ -76,7 +76,7 @@ module.exports = function(grunt) {
       , uglify: {
         files: [
             'client_src/assets/scripts/<%= meta.sysName %>Cfg.js'
-            , 'client_src/features/**/*.js'
+            , 'client_src/modules/**/*.js'
           ]
           , tasks: ['uglify']
           , options: {
