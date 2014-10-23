@@ -8,6 +8,6 @@
 4. Run `bower install` from command line
 5. Run `grunt` from command line (default grunt task)
 6. For testing: have Karma installed globally on your machine (`npm install -g karma-cli`)
-7. Run `grunt watch` from command line to watch for changes to public files and unit tests
+7. Run `grunt watch` from command line to watch for changes to client_src files and unit tests
 8. Run `npm start` from command line to kick off the node.js server (or `node server.js`)
 9. __Open your browser and enjoy!__
