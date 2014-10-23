@@ -1,0 +1,26 @@
+{
+  "name": "MEANjs starter",
+  "version": "0.0.1",
+  "authors": [
+    "Andy Martin <andymartin51@gmail.com>"
+  ],
+  "moduleType": [
+    "node"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "public/bower_components",
+    "test"
+  ],
+  "dependencies": {
+    "angular": "~1.2.26",
+    "bootstrap": "~3.2.0",
+    "angular-route": "~1.2.26",
+    "angular-mocks": "~1.2.26"
+  },
+  "devDependencies": {
+    "angular-resource": "~1.2.26"
+  }
+}
