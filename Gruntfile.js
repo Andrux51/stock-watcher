@@ -8,11 +8,18 @@ module.exports = function(grunt) {
       , sysName: 'meanjs'
     }
 
+    , copy: {
+      deploy: {
+        files: [
+          { src: '<%= meta.srcPath %>/index.html', dest: '<%= meta.deployPath %>/index.html' }
+          , { expand: true, cwd: '<%= meta.srcPath %>', src: 'modules/**/views/**', dest: '<%= meta.deployPath %>' }
+          , { expand: true, cwd: '<%= meta.srcPath %>/assets', src: 'images/**', dest: '<%= meta.deployPath %>/assets' }
+        ]
+      }
+    }
+
     , clean: {
-      // clean out *entire* dist folder *** DO NOT DO THIS!!! ***
       all: ['<%= meta.deployPath %>']
-      // clean scripts and styles for distribution - everything else should stay
-      , deploy: ['<%= meta.deployPath %>/scripts','<%= meta.deployPath %>/styles']
       , tmp: ['.tmp']
     }
 
@@ -25,26 +32,44 @@ module.exports = function(grunt) {
           ]
         }
         , files: {
-          // '<%= meta.deployPath %>/styles/<%= meta.sysName %>.min.css': ['<%= meta.srcPath %>/assets/styles/**/*.less']
           '<%= meta.srcPath %>/assets/styles/<%= meta.sysName %>.css': ['<%= meta.srcPath %>/assets/styles/**/*.less']
         }
       }
     }
     
-    , copy: {
-      deploy: {
-        files: [
-          { src: '<%= meta.srcPath %>/index.html', dest: '<%= meta.deployPath %>/index.html' }
-          , { expand: true, cwd: '<%= meta.srcPath %>', src: 'modules/**/views/**', dest: '<%= meta.deployPath %>' }
-          , { expand: true, cwd: '<%= meta.srcPath %>/assets', src: 'images/**', dest: '<%= meta.deployPath %>/assets' }
-        ]
+    , useminPrepare: {
+      html: '<%= meta.srcPath %>/index.html'
+      , options: {
+        dest: '<%= meta.deployPath %>'
+        , staging: '.tmp'
       }
+    }
 
-      , old: {
-        files: [
-          { expand: true, cwd: '<%= meta.srcPath %>', src: 'modules/**/views/**', dest: '<%= meta.deployPath %>' }
-        ]
+    , concat: {
+      options: {
+        banner: '/*! <%= pkg.name %> - <%= grunt.template.today("yyyy-mm-dd") %> */\n'
+        , separator: ';'
       }
+    }
+
+    , uglify: {
+      options: {
+        banner: '/*! <%= pkg.name %> - <%= grunt.template.today("yyyy-mm-dd") %> */\n'
+        , preserveComments: false
+      }
+    }
+
+    , filerev: {
+      files: {
+        src: ['<%= meta.deployPath %>/scripts/<%= meta.sysName %>.min.js'
+          , '<%= meta.deployPath %>/scripts/bower.min.js'
+          , '<%= meta.deployPath %>/styles/<%= meta.sysName %>.min.css'
+          , '<%= meta.deployPath %>/styles/bower.min.css']
+      }
+    }
+
+    , usemin: {
+      html: '<%= meta.deployPath %>/index.html'
     }
     
     , karma: {
@@ -94,45 +119,6 @@ module.exports = function(grunt) {
 
 
 
-    , useminPrepare: {
-      html: '<%= meta.srcPath %>/index.html'
-      , options: {
-        dest: '<%= meta.deployPath %>'
-        , staging: '.tmp'
-      }
-    }
-
-    , concat: {
-      options: {
-        banner: '/*! <%= pkg.name %> - <%= grunt.template.today("yyyy-mm-dd") %> */\n'
-        , separator: ';'
-      }
-    }
-
-    , uglify: {
-      options: {
-        banner: '/*! <%= pkg.name %> - <%= grunt.template.today("yyyy-mm-dd") %> */\n'
-        , preserveComments: false
-      }
-      // , dist: {
-      //   files: {
-      //     '<%= meta.deployPath %>/scripts/<%= meta.sysName %>.min.js': ['<%= meta.srcPath %>/assets/scripts/config.js','<%= meta.srcPath %>/assets/scripts/routes.js','<%= meta.srcPath %>/modules/**/*.js']
-      //   }
-      // }
-    }
-
-    , filerev: {
-      files: {
-        src: ['<%= meta.deployPath %>/scripts/<%= meta.sysName %>.min.js'
-          , '<%= meta.deployPath %>/scripts/bower.min.js'
-          , '<%= meta.deployPath %>/styles/<%= meta.sysName %>.min.css'
-          , '<%= meta.deployPath %>/styles/bower.min.css']
-      }
-    }
-
-    , usemin: {
-      html: '<%= meta.deployPath %>/index.html'
-    }
   });
 
   grunt.loadNpmTasks('grunt-contrib-uglify');
