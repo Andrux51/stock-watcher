@@ -2,6 +2,7 @@ module.exports = function(grunt) {
   grunt.initConfig({
     pkg: grunt.file.readJSON('package.json')
     
+    // arbitrary variables for use across gruntfile
     , meta: {
       srcPath: 'client_src'
       , deployPath: 'public'
@@ -103,7 +104,7 @@ module.exports = function(grunt) {
             atBegin: true
           }
       }
-      , test_client: {
+      , test: {
         files: [
           'test/client/unit/**/*.js'
           , 'test/client/fixtures/*.json'
@@ -114,11 +115,6 @@ module.exports = function(grunt) {
         }
       }
     }
-
-
-
-
-
   });
 
   grunt.loadNpmTasks('grunt-contrib-uglify');
