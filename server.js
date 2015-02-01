@@ -3,7 +3,8 @@ var app = express();
 var fs = require('fs');
 var routes = require('./api/routes/routes')(app, fs);
 
-app.use(express.static(process.cwd() + '/public/'));
+// TODO: this is where the base for CSS/JS files is... add variable to be set for deploy ('/public/')
+app.use(express.static(process.cwd() + '/client_src/'));
 app.engine('html', require('ejs').renderFile);
 app.set('view engine', 'html');
 app.set('views', process.cwd());

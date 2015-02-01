@@ -121,6 +121,6 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-usemin');
     grunt.loadNpmTasks('grunt-contrib-cssmin');
 
-    // grunt.registerTask('default', ['clean:deploy', 'uglify', 'less:dist', 'copy:deploy']);
+    grunt.registerTask('default', ['less', 'deploy']);
     grunt.registerTask('deploy', ['clean:all', 'copy:deploy', 'useminPrepare', 'concat:generated', 'uglify:generated', 'concat:generated', 'cssmin:generated', 'filerev', 'usemin', 'clean:tmp']);
 };

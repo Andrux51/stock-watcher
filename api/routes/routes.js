@@ -1,7 +1,7 @@
 module.exports = function(app, fs) {
     // serve client website using node webserver, will be Angular single-page application (SPA)
     app.get('/', function(request, response) {
-        response.render('public/index');
+        response.render('client_src/index');
     });
     // probably will want to have the API docs live in the client to be more Angular-ready
     app.get('/api', function(request, response) {

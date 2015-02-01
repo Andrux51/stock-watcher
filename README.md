@@ -18,7 +18,7 @@
 
 #### Change the project to be your own!
 
-* In the `public/index.html` file, change instances of `meanjs` or `meanjsApp` to the app name of your choice
+* In the `client_src/index.html` file, change instances of `meanjs` or `meanjsApp` to the app name of your choice
 * In the `client_src/` folder, find files named `meanjs` and variables within and change to the app name of your choice
 * In the `Gruntfile.js` file, change the `meta.sysName` property to the app name that matches your file naming pattern
 
