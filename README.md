@@ -1,6 +1,6 @@
 ## MEANjs Stack Starter Kit
 
-##### Steps to Get Started
+#### Steps to Get Started
 
 1. Have npm installed globally on your machine (comes with node.js download)
 2. Run `npm install` from command line to install node.js dependencies
@@ -16,13 +16,13 @@
 * __Open your browser and enjoy!__
 
 
-##### Change the project to be your own!
+#### Change the project to be your own!
 
 * In the `public/index.html` file, change instances of `meanjs` or `meanjsApp` to the app name of your choice
 * In the `client_src/` folder, find files named `meanjs` and variables within and change to the app name of your choice
 * In the `Gruntfile.js` file, change the `meta.sysName` property to the app name that matches your file naming pattern
 
-##### Deploy the project to a build server
+#### Deploy the project to a build server
 
 * `grunt deploy` is configured to load all necessary client files into a /public folder
 ** simply run this command and then copy the /public folder onto your remote server
