@@ -2,42 +2,41 @@
 <html lang="en" ng-app="meanjsApp">
 
 <head>
-  <title>MEANjs Starter Kit</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <!-- build:css styles/bower.min.css -->
-  <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
-  <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap-theme.css" />
-  <!-- endbuild -->
-  <!-- build:css styles/meanjs.min.css -->
-  <link rel="stylesheet" href="assets/styles/meanjs.css" />
-  <!-- endbuild -->
+    <title>MEANjs Starter Kit</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- build:css styles/bower.min.css -->
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap-theme.css" />
+    <!-- endbuild -->
+    <!-- build:css styles/meanjs.min.css -->
+    <link rel="stylesheet" href="styles/meanjs.css" />
+    <!-- endbuild -->
 </head>
 
 <body>
-  <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-    <div class="container">
-      <div class="navbar-header">
-        <a class="navbar-brand" href="#">Brand</a>
-      </div>
-    </div>
-  </nav>
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#">Brand</a>
+            </div>
+        </div>
+    </nav>
 
-  <!-- ng-view directive pulls in "partial" content using angular routes (see features/core/routes/meanjsRoutes.js) -->
-  <div class="container" ng-view></div>
+    <!-- ng-view directive pulls in "partial" content using angular routes (see features/core/routes/meanjsRoutes.js) -->
+    <div class="container" ng-view></div>
 
-  <!-- build:js scripts/bower.min.js -->
-  <script src="bower_components/jquery/dist/jquery.js"></script>
-  <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
-  <script src="bower_components/angular/angular.js"></script>
-  <script src="bower_components/angular-route/angular-route.js"></script>
-  <script src="bower_components/angular-resource/angular-resource.js"></script>
-  <!-- endbuild -->
-
-  <!-- build:js scripts/meanjs.min.js -->
-  <script src="assets/scripts/config.js"></script>
-  <script src="assets/scripts/routes.js"></script>
-  <script src="modules/core/controllers/_exampleController.js"></script>
-  <!-- endbuild -->
+    <!-- build:js scripts/bower.min.js -->
+    <script src="bower_components/jquery/dist/jquery.js"></script>
+    <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/angular-route/angular-route.js"></script>
+    <script src="bower_components/angular-resource/angular-resource.js"></script>
+    <!-- endbuild -->
+    <!-- build:js scripts/meanjs.min.js -->
+    <script src="scripts/config.js"></script>
+    <script src="scripts/routes.js"></script>
+    <script src="modules/core/controllers/_exampleController.js"></script>
+    <!-- endbuild -->
 </body>
 
 </html>
