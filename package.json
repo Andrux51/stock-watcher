@@ -4,7 +4,7 @@
   "description": "A starter template for MEAN stack applications",
   "main": "server.js",
   "scripts": {
-    "start": "nodemon -w /api/**/* -w server.js --delay 0.1 server.js",
+    "start": "nodemon server.js",
     "test": "mocha -w --reporter min test/api/unit/*"
   },
   "repository": {
