@@ -11,6 +11,8 @@
 7. Run `grunt watch` from command line to watch for changes and process LESS files and unit tests
 8. Have nodemon installed globally on your machine (`npm install -g nodemon`)
 9. Run `npm start` from command line to kick off the node.js server and watch for file changes
+  - This failed until I installed express
+  - `npm install -g express`
 10. For unit testing the server: be sure to have Mocha installed globally on your machine (`npm install -g mocha`)
 11. Run `npm test` from command line to run server unit tests and watch for file changes
 
