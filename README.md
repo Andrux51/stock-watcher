@@ -2,7 +2,7 @@
 
 #### Description
 
-A project I put together to have a good starting place for new MEAN stack projects. 
+A project built to have a good starting place for new MEAN stack projects. 
 
 The goal is for this kit to be ready to run out of the box with a file/folder structure that makes development easy while also making a clean, compact deployment.
 
