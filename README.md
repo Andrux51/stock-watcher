@@ -6,6 +6,7 @@
 2. Run `npm install` from command line to install node.js dependencies
 3. Have bower and grunt installed globally on your machine (`npm install -g bower grunt-cli`)
 4. Run `bower install` from command line to install bower dependencies
+  - If you receive the `bower command not found` message, run `npm config set prefix /usr/local`
 6. For unit testing the client: be sure to have Karma installed globally on your machine (`npm install -g karma-cli`)
 7. Run `grunt watch` from command line to watch for changes and process LESS files and unit tests
 8. Have nodemon installed globally on your machine (`npm install -g nodemon`)
