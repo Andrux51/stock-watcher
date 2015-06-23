@@ -81,6 +81,15 @@ module.exports = function(grunt) {
                 , singleRun: true
             }
         }
+
+        , mochacov: {
+            options: {
+              coveralls: true
+              , instrument: false
+              , files: 'test/api/**/*.js'
+            }
+        }
+
         
         , watch: {
             configFiles: {
@@ -120,6 +129,8 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-concat');
     grunt.loadNpmTasks('grunt-usemin');
     grunt.loadNpmTasks('grunt-contrib-cssmin');
+
+    grunt.loadNpmTasks('grunt-mocha-cov');
 
     grunt.registerTask('default', ['less', 'deploy']);
     grunt.registerTask('deploy', ['clean:all', 'copy:deploy', 'useminPrepare', 'concat:generated', 'uglify:generated', 'concat:generated', 'cssmin:generated', 'filerev', 'usemin', 'clean:tmp']);

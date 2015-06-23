@@ -5,7 +5,13 @@
   "main": "server.js",
   "scripts": {
     "start": "nodemon server.js",
-    "test": "mocha -w --reporter min test/api/unit/*"
+    "test": "mocha -R min test/api/**/*.js && karma start test/client/karma.conf.js && grunt mochacov",
+    "testlocal": "mocha -R min test/api/**/*.js && karma start test/client/karma.conf.js"
+  },
+  "config": {
+    "blanket": {
+      "pattern": "test/api/**.*.js"
+    }
   },
   "repository": {
     "type": "git",
@@ -20,6 +26,7 @@
     "express": "^4.9.5"
   },
   "devDependencies": {
+    "blanket": "^1.1.7",
     "chai": "^1.10.0",
     "grunt": "^0.4.5",
     "grunt-contrib-clean": "^0.6.0",
@@ -31,6 +38,7 @@
     "grunt-contrib-watch": "^0.6.1",
     "grunt-filerev": "^2.1.2",
     "grunt-karma": "^0.9.0",
+    "grunt-mocha-cov": "^0.4.0",
     "grunt-usemin": "^3.0.0",
     "karma": "^0.12.24",
     "karma-coverage": "^0.2.7",

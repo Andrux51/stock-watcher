@@ -48,7 +48,7 @@ module.exports = function(config) {
         , coverageReporter: {
             dir: 'test/client/coverage'
             , reporters: [
-                { type: 'html', subdir: 'report-html' }
+                { type: 'lcov', subdir: 'report-lcov' }
                 , { type: 'text', subdir: '.', file: 'text.txt' }
                 , { type: 'text-summary', subdir: '.', file: 'text-summary.txt' }
             ]
@@ -75,6 +75,6 @@ module.exports = function(config) {
 
         // Continuous Integration mode
         // if true, Karma captures browsers, runs the tests and exits
-        , singleRun: false
+        , singleRun: true
     });
 };

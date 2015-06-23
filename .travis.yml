@@ -1,0 +1,10 @@
+language: node_js
+node_js:
+  - "node"
+  - "iojs"
+before_script:
+  - "npm install -g express mocha bower grunt-cli karma-cli"
+  - "bower install"
+  - "grunt"
+after_script:
+  - "cat test/client/coverage/report-lcov/lcov.info | ./node_modules/coveralls/bin/coveralls.js"

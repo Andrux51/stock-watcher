@@ -1,6 +1,10 @@
+// using blanket for code coverage (http://blanketjs.org/)
+require('blanket');
+
 // using Chai assert/expect framework (http://chaijs.com/)
 var expect = require('chai').expect;
 var assert = require('chai').assert;
+
 // load JSON in from files... if connected to MongoDB or similar, you could put sample data in a /test/api/fixtures folder instead to keep the project folders clean
 var fs = require('fs');
 var _test = JSON.parse(fs.readFileSync(process.cwd() + '/api/json/test.json'));
