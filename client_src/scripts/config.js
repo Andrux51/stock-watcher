@@ -1,3 +1,5 @@
-var meanjsApp = angular.module('meanjsApp', [
-    'ngRoute'
-]);
+(function() {
+    angular.module('meanjsApp', [
+        'ngRoute'
+    ]);
+})();

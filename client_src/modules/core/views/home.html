@@ -1,1 +1,16 @@
-{{foo}}
+<div ng-init="vm.init()"></div>
+<input type="text" maxlength="5" style="width:10em;" ng-model="vm.symbol" />
+<button type="button" class="btn btn-success btn-sm" ng-click="vm.getQuoteData(vm.symbol)">Add Watch</button>
+<button type="button" class="btn btn-info btn-sm" ng-click="vm.autoRefreshAll()">Start All</button>
+
+<br /><br />
+<div class="row">
+    <div class="col-sm-4" ng-repeat="stock in vm.watchedStocks">
+        <div class="thumbnail">
+            <span class="pull-right" ng-click="vm.autoRefresh(stock)"><i class="fa fa-fw fa-refresh"></i></span>
+            <h3>{{stock.t}}</h3>
+            <p>Change: <span ng-class="{'text-success':stock.c > 0, 'text-danger':stock.c < 0}">{{stock.c}}</span></p>
+            <p>Change PCT: <span ng-class="{'text-success':stock.cp > 0, 'text-danger':stock.cp < 0}">{{stock.cp}}</span></p>
+        </div>
+    </div>
+</div>
