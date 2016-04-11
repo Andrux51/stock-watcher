@@ -4,8 +4,7 @@
   "description": "A starter template for MEAN stack applications",
   "main": "server.js",
   "scripts": {
-    "start": "node server.js",
-    "startlocal": "nodemon server.js",
+    "start": "nodemon server.js",
     "test": "mocha -R min test/api/**/*.js && karma start test/client/karma.conf.js && grunt mochacov",
     "testlocal": "mocha -R min test/api/**/*.js && karma start test/client/karma.conf.js"
   },
@@ -27,6 +26,7 @@
     "body-parser": "^1.15.0",
     "ejs": "^1.0.0",
     "express": "^4.13.3",
+    "nodemon": "latest",
     "nodemailer": "^2.3.2"
   },
   "devDependencies": {
