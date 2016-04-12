@@ -1,5 +1,6 @@
 (function() {
     angular.module('meanjsApp', [
-        'ngRoute'
+        'ngRoute',
+        'ngCookies'
     ]);
 })();
