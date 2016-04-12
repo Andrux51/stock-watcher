@@ -1,5 +1,4 @@
 ## MEANjs Stack Starter Kit
-[![Build Status](https://travis-ci.org/Andrux51/meanjs-starter.svg?branch=master)](https://travis-ci.org/Andrux51/meanjs-starter) [![Coverage Status](https://coveralls.io/repos/Andrux51/meanjs-starter/badge.svg?branch=master)](https://coveralls.io/r/Andrux51/meanjs-starter?branch=master) [![Code Climate](https://codeclimate.com/github/Andrux51/meanjs-starter/badges/gpa.svg)](https://codeclimate.com/github/Andrux51/meanjs-starter)
 
 #### Description
 
